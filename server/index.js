@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use('/API/v1', express.static(path.join(process.cwd(), 'public')));
+app.use('/public', express.static(path.join(process.cwd(), 'public')));
 
 // Ruta principal de bienvenida.
 app.get('/', (req, res) => {

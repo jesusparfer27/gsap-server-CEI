@@ -2,7 +2,7 @@ import dotenv from 'dotenv'; // Importa la librería dotenv para cargar variable
 
 dotenv.config(); // Carga las variables de entorno desde el archivo .env a process.env.
 
-export const FULL_DOMAIN_1 = process.env.FULL_DOMAIN_1 || 'http://localhost:3000'; 
+export const FULL_DOMAIN_1 = process.env.FULL_DOMAIN_1 || 'http://localhost:3000';  
 // Asigna la variable FULL_DOMAIN_1, tomando el valor de la variable de entorno o un valor por defecto (localhost:3027).
 
 export const PORT = process.env.PORT || 3000; 

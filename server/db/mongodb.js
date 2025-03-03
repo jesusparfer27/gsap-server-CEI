@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import { mongodbUri } from '../config/mongo.config.js';
 
-const connectDB = async () => {
+const connectDB = async () => { 
     try {
         await mongoose.connect(mongodbUri, {
             useNewUrlParser: true,

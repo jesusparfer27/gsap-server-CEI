@@ -5,15 +5,20 @@ import mongoRoutes from './routes/routes.js'; // Rutas de la API para MongoDB.
 import { connectDB } from './db/mongodb.js'; 
 import path from 'path'; // Módulo para trabajar con rutas de archivos y directorios.
 import fs from 'fs'; // Acceso al sistema de archivos.
+import { fileURLToPath } from 'url'; // Resuelve rutas en ES Modules.
 
 
 const app = express();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename); 
 
 // Configura middlewares para CORS, JSON y datos codificados en URL.
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use('/public', express.static(path.join(process.cwd(), 'public'))); 
+
+app.use('/images', express.static(path.join(__dirname, './public/images')));
 
 // Ruta principal de bienvenida.
 app.get('/', (req, res) => {

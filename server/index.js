@@ -4,6 +4,8 @@ import { PORT, FULL_DOMAIN_1 } from './config/mongo.config.js'; // Importa el pu
 import mongoRoutes from './routes/routes.js'; // Rutas de la API para MongoDB.
 import { connectDB } from './db/mongodb.js'; 
 import path from 'path'; // Módulo para trabajar con rutas de archivos y directorios.
+import fs from 'fs'; // Acceso al sistema de archivos.
+
 
 const app = express();
 

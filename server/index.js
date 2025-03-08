@@ -5,7 +5,7 @@ import mongoRoutes from './routes/routes.js'; // Rutas de la API para MongoDB.
 import { connectDB } from './db/mongodb.js'; 
 import path from 'path'; // Módulo para trabajar con rutas de archivos y directorios.
 import fs from 'fs'; // Acceso al sistema de archivos.
-import { fileURLToPath } from 'url'; // Resuelve rutas en ES Modules.
+import { fileURLToPath } from 'url'; // Resuelve rutas en ES Modules. 
 
 
 const app = express();

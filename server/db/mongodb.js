@@ -22,7 +22,13 @@ const furnitureSchema = new mongoose.Schema({
     imagen: String
 });
 
+const furnitureSliderSchema = new mongoose.Schema({
+    imagen: String
+});
+
 const Furniture = mongoose.model('Furniture', furnitureSchema, 'furnitures-main');
+const FurnitureSlider = mongoose.model('FurnitureSlider', furnitureSliderSchema, 'furnitures-slider');
 
 
-export { Furniture, connectDB };
+
+export { Furniture, FurnitureSlider, connectDB };
